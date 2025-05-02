@@ -1,0 +1,8 @@
+price-comparator-extension/
+│
+├── manifest.json
+├── content.js
+├── background.js
+├── popup.html
+├── popup.js
+└── style.css
