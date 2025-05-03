@@ -1,0 +1,37 @@
+{
+  "manifest_version": 3,
+  "name": "Amazon Price Comparator",
+  "version": "1.0",
+  "description": "Compares Amazon items with other stores.",
+  "permissions": [
+    "scripting", "tabs", "activeTab", "downloads"
+  ],
+  "host_permissions": [
+    "https://www.amazon.com/*",
+    "https://www.aliexpress.com/*",
+    "https://*.aliexpress.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.amazon.com/*"],
+      "js": ["contentScript.js"],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": ["https://*.aliexpress.com/*"],
+      "js": ["aliexpressScript.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}

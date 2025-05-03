@@ -1,0 +1,18 @@
+body {
+  font-family: sans-serif;
+  margin: 10px;
+}
+button {
+  margin-bottom: 10px;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+li {
+  margin-bottom: 8px;
+}
+.dimmed {
+  color: gray;
+  font-style: italic;
+}
